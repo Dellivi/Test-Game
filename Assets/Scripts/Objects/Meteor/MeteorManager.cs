@@ -43,7 +43,6 @@ public class MeteorManager : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Meteor"))
                 {
                     IsHit = true;
-                    Score.StartScore += 1;  // Change score in UIManager
 
                     Destroy(hit.collider.gameObject);
                     Instantiate(explode, hit.transform.position, Quaternion.identity); // Instantiate explode

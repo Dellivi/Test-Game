@@ -19,6 +19,7 @@ public class MeteorSpawn : MonoBehaviour
 
     private void Start()
     {
+
         spawnTime = Random.Range(1f, 3f);
         spawnDelay = Random.Range(0.5f, 6f);
 
@@ -36,11 +37,15 @@ public class MeteorSpawn : MonoBehaviour
         }
     }
 
+    //-------------------------------------------------------------------------------------------
+    // Public methods
+    //-------------------------------------------------------------------------------------------
+
     void Spawn()
     {
-        
         Vector3 spawnVector = new Vector3(spawnPos.position.x, Random.Range(-3f, 4f), spawnPos.position.z);
         Instantiate( meteor, spawnVector, Quaternion.identity);
+        
         
     }
 }

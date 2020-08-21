@@ -149,9 +149,9 @@ GameObject:
   - component: {fileID: 1243740404358096506}
   - component: {fileID: 1243740404358096507}
   - component: {fileID: -262904879339762021}
-  - component: {fileID: 850658200028637689}
+  - component: {fileID: 976967336475159679}
   m_Layer: 8
-  m_Name: Meteor Left
+  m_Name: Meteor
   m_TagString: Meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &850658200028637689
+--- !u!114 &976967336475159679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,9 +270,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243740404358096502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8320c4586fba4fa418fbb66ce698f224, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e4fe78dfa6f1644eb57e71c9e7839ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: {x: 1, y: 0}
 --- !u!1001 &2892172919841333324
 PrefabInstance:
   m_ObjectHideFlags: 0

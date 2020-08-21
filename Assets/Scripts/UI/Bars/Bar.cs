@@ -62,12 +62,26 @@ public class Bar : MonoBehaviour
             
     }
 
+    //-------------------------------------------------------------------------------------------
+    // Public methods
+    //-------------------------------------------------------------------------------------------
+
     public void UpdateBar( float alpha)
     {
         var TempColor = barsArray[barCount].color;  // Change Alpha in one of the Bars += 1 every click;
         TempColor.a = alpha;
         barsArray[barCount].color = TempColor;
     }
+
+    void SpawnBonus()
+        {
+            Vector3 vector = new Vector3(Random.Range(1f, 5f), Random.Range(1f, 5f), bonusSpawn.position.z);
+            Instantiate(bonus, vector, Quaternion.identity);
+        }
+
+    //-------------------------------------------------------------------------------------------
+    // IEnumerators
+    //-------------------------------------------------------------------------------------------
 
     IEnumerator ResetBar()  //Change Alpha in every bars
     {
@@ -84,10 +98,10 @@ public class Bar : MonoBehaviour
         } 
     }
 
-    void SpawnBonus()
-    {
-        Vector3 vector = new Vector3(Random.Range(1f, 5f), Random.Range(1f, 5f), bonusSpawn.position.z);
-        Instantiate(bonus, vector, Quaternion.identity);
-    }
+
+
+    //-------------------------------------------------------------------------------------------
+    // end
+    //-------------------------------------------------------------------------------------------
 
 }

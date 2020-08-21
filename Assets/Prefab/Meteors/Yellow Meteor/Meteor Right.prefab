@@ -1,28 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3049058308717240392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7464952275568458089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7007335e8f1ab743b9d6d35af338b3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &8564282735677464351
+--- !u!1001 &968939331330240698
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 976967336475159679, guid: a19cdd1f1488eeb44938cd1d5d90672a,
+        type: 3}
+      propertyPath: dir.x
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1243740404358096502, guid: a19cdd1f1488eeb44938cd1d5d90672a,
         type: 3}
       propertyPath: m_Name
-      value: Meteor Right
+      value: Meteor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1243740404358096505, guid: a19cdd1f1488eeb44938cd1d5d90672a,
         type: 3}
@@ -79,12 +72,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 850658200028637689, guid: a19cdd1f1488eeb44938cd1d5d90672a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a19cdd1f1488eeb44938cd1d5d90672a, type: 3}
---- !u!1 &7464952275568458089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1243740404358096502, guid: a19cdd1f1488eeb44938cd1d5d90672a,
-    type: 3}
-  m_PrefabInstance: {fileID: 8564282735677464351}
-  m_PrefabAsset: {fileID: 0}

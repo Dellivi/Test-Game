@@ -21,11 +21,16 @@ public class MeteorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UIManager.IsGameStopped && !UIManager.IsGamePaused)  // Stop any action if game stop
+        // Stop any action if game stop
+        if (!UIManager.IsGameStopped && !UIManager.IsGamePaused)  
         {
             OnClick();
         } 
     }
+
+    //-------------------------------------------------------------------------------------------
+    // Public methods
+    //-------------------------------------------------------------------------------------------
 
     void OnClick()
     {
@@ -51,7 +56,12 @@ public class MeteorManager : MonoBehaviour
             }
         }
     }
-   
+
+
+
+    //-------------------------------------------------------------------------------------------
+    // end
+    //-------------------------------------------------------------------------------------------
 }
 
 

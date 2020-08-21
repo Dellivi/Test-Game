@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 3895153974505576003}
-  meteor: {fileID: 7464952275568458089, guid: 60e269853baeccb468e2374531b96c7a, type: 3}
+  meteor: {fileID: 1243740404358096502, guid: a19cdd1f1488eeb44938cd1d5d90672a, type: 3}
+  dir: {x: 1, y: 0}
+  met: {fileID: 976967336475159679, guid: a19cdd1f1488eeb44938cd1d5d90672a, type: 3}

@@ -6185,6 +6185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explode: {fileID: 2714927000564646147, guid: 8eaf2f3d211645446b4758b1593bc4ad, type: 3}
+  meteor: {fileID: 1243740404358096502, guid: a19cdd1f1488eeb44938cd1d5d90672a, type: 3}
 --- !u!1 &878658891
 GameObject:
   m_ObjectHideFlags: 0

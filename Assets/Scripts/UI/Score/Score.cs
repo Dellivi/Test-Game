@@ -6,6 +6,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TextMeshProUGUI score;
+
     private static int startScore;
     public static int StartScore { get => startScore; set => startScore = value; }
 
@@ -19,17 +20,16 @@ public class Score : MonoBehaviour
         if(StartScore >= 0)
         {
             ShowScore();
-
         }
         else
         {
-            UIManager.IsGameStopped = true;
+            GameManager.IsGameStopped = true;
             MeteorSpawn.StopSpawning = true;
         } 
     }
 
     //-------------------------------------------------------------------------------------------
-    // Public methods
+    // Methods
     //-------------------------------------------------------------------------------------------
     void ShowScore()
     {

@@ -22,28 +22,35 @@ public class Timer : MonoBehaviour
         StartTimer();
     }
 
+    //-------------------------------------------------------------------------------------------
+    // Methods
+    //-------------------------------------------------------------------------------------------
+
     void StartTimer()
     {
-        if (!UIManager.IsGameStopped && Time >= 0 && !UIManager.IsGamePaused)
+        if (!GameManager.IsGameStopped && Time >= 0 && !GameManager.IsGamePaused)
         {
             Time -= UnityEngine.Time.deltaTime;
             var timeInt = (int)Time;
 
-            Debug.Log("TimerCount: " + timeInt);
             timer.SetText(timeInt.ToString());
-
-            UnityEngine.Time.timeScale = 1; //  Normal time
+            //  Normal time
+            UnityEngine.Time.timeScale = 1; 
         }
         else
         {
-            
-            UIManager.IsGameStopped = true;  // Stop game if Time = 0
+            // Stop game if Time = 0  
+            GameManager.IsGameStopped = true;  
 
-            if(UIManager.IsGameStopped && Time <= 0)
+            if(GameManager.IsGameStopped && Time <= 0)
             {
                 MeteorSpawn.StopSpawning = true;
             }
         }
-    }     
-   
+    }
+
+    //-------------------------------------------------------------------------------------------
+    // end
+    //-------------------------------------------------------------------------------------------
+
 }

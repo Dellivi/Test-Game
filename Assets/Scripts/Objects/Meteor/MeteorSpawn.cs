@@ -11,9 +11,9 @@ public class MeteorSpawn : MonoBehaviour
     [SerializeField]  private  GameObject meteor;
 
     private static bool stopSpawning = false;
+
     private float spawnTime;
     private float spawnDelay;
-
 
     public static bool StopSpawning { get => stopSpawning; set => stopSpawning = value; }
 
@@ -38,14 +38,16 @@ public class MeteorSpawn : MonoBehaviour
     }
 
     //-------------------------------------------------------------------------------------------
-    // Public methods
+    // Methods
     //-------------------------------------------------------------------------------------------
 
     void Spawn()
     {
         Vector3 spawnVector = new Vector3(spawnPos.position.x, Random.Range(-3f, 4f), spawnPos.position.z);
-        Instantiate( meteor, spawnVector, Quaternion.identity);
-        
-        
+        Instantiate( meteor, spawnVector, Quaternion.identity); 
     }
+
+    //-------------------------------------------------------------------------------------------
+    // end
+    //-------------------------------------------------------------------------------------------
 }

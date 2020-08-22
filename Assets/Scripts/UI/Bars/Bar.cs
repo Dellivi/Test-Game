@@ -10,7 +10,9 @@ public class Bar : MonoBehaviour
     public Transform bonusSpawn;
 
     private static bool isReset;
+
     private  int barCount;
+
     private static Image[] barsArray;
 
     public static bool IsReset { get => isReset; set => isReset = value; }
@@ -40,7 +42,6 @@ public class Bar : MonoBehaviour
         {
             UpdateBar(1f);
             barCount += 1;
-            Debug.Log(barCount);
             MeteorManager.IsHit = false;
         }
 
@@ -48,7 +49,6 @@ public class Bar : MonoBehaviour
         {
             if (barCount >= 5)
             {   
-                Debug.Log("Time Confirmed");
                 SpawnBonus();
             }
 
@@ -66,18 +66,19 @@ public class Bar : MonoBehaviour
     // Public methods
     //-------------------------------------------------------------------------------------------
 
-    public void UpdateBar( float alpha)
+    public void UpdateBar(float alpha)
     {
-        var TempColor = barsArray[barCount].color;  // Change Alpha in one of the Bars += 1 every click;
+        // Change Alpha in one of the Bars += 1 every click;
+        var TempColor = barsArray[barCount].color;  
         TempColor.a = alpha;
         barsArray[barCount].color = TempColor;
     }
 
-    void SpawnBonus()
-        {
-            Vector3 vector = new Vector3(Random.Range(1f, 5f), Random.Range(1f, 5f), bonusSpawn.position.z);
-            Instantiate(bonus, vector, Quaternion.identity);
-        }
+    public void SpawnBonus()
+    {
+        Vector3 vector = new Vector3(Random.Range(1f, 5f), Random.Range(1f, 5f), bonusSpawn.position.z);
+        Instantiate(bonus, vector, Quaternion.identity);
+    }
 
     //-------------------------------------------------------------------------------------------
     // IEnumerators
@@ -87,7 +88,6 @@ public class Bar : MonoBehaviour
     {
         for (int i = barCount - 1; i < barsArray.Length && i != -1; i--)
         {
-
             for (float ft = 1f; ft >= 0.3f; ft -= 0.7f)
             {
                 var TempColor = barsArray[i].color;
@@ -97,8 +97,6 @@ public class Bar : MonoBehaviour
             } 
         } 
     }
-
-
 
     //-------------------------------------------------------------------------------------------
     // end

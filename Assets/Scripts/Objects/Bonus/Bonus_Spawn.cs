@@ -5,6 +5,8 @@ public class Bonus_Spawn : MonoBehaviour
 {
 
     public GameObject explode;
+    public GameObject bonus;
+    
 
     // Update is called once per frame
     void Update()
@@ -17,14 +19,17 @@ public class Bonus_Spawn : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Bonus"))
                 {
-                    Timer.Time += 3f;
                     Destroy(hit.collider.gameObject);
-                    Instantiate(explode, hit.transform.position, Quaternion.identity); // Instantiate explode
                 }
-
             }
         }
 
        
+    }
+
+    private void OnDestroy()
+    {
+        Timer.Time += 3f;
+        Instantiate(explode, bonus.transform.position, Quaternion.identity);
     }
 }

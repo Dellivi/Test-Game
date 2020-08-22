@@ -22,14 +22,14 @@ public class MeteorManager : MonoBehaviour
     void Update()
     {
         // Stop any action if game stop
-        if (!UIManager.IsGameStopped && !UIManager.IsGamePaused)  
+        if (!GameManager.IsGameStopped && !GameManager.IsGamePaused)  
         {
             OnClick();
         } 
     }
 
     //-------------------------------------------------------------------------------------------
-    // Public methods
+    // Methods
     //-------------------------------------------------------------------------------------------
 
     void OnClick()
@@ -45,18 +45,19 @@ public class MeteorManager : MonoBehaviour
                     IsHit = true;
 
                     Destroy(hit.collider.gameObject);
-                    Instantiate(explode, hit.transform.position, Quaternion.identity); // Instantiate explode
+                    // Instantiate explode
+                    Instantiate(explode, hit.transform.position, Quaternion.identity); 
                 }
             }
-            else // if hit other
+            // if hit other
+            else 
             {
                 IsHit = false;
-                Bar.IsReset = true;  // if hit other reset the bars
+                // if hit other reset the bars
+                Bar.IsReset = true;  
             }
         }
     }
-
-
 
     //-------------------------------------------------------------------------------------------
     // end

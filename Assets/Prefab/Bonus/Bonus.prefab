@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explode: {fileID: 2714927000564646147, guid: 8eaf2f3d211645446b4758b1593bc4ad, type: 3}
+  bonus: {fileID: 1532533333179652146}
 --- !u!58 &4426499582360415598
 CircleCollider2D:
   m_ObjectHideFlags: 0

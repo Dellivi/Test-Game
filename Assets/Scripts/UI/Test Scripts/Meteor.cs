@@ -29,7 +29,8 @@ public class Meteor : MonoBehaviour, IMeteor
         //var result = Random.Range(0, 2) * 2 - 1; 
         //Dir = new Vector2(result, 0);
 
-        ScoreAdd = 1; // Default scoreAdd
+        // Default scoreAdd
+        ScoreAdd = 1; 
         
         speed = Random.Range(1f,4f);
     }
@@ -40,9 +41,9 @@ public class Meteor : MonoBehaviour, IMeteor
     }
 
     private void OnDestroy()
-        {
-            Score.StartScore += ScoreAdd;
-        }
+    {
+        Score.StartScore += ScoreAdd;
+    }
 
 
 
@@ -53,7 +54,7 @@ public class Meteor : MonoBehaviour, IMeteor
 
     public void Move()
     {
-        if (!UIManager.IsGameStopped && !UIManager.IsGamePaused)
+        if (!GameManager.IsGameStopped && !GameManager.IsGamePaused)
         {
             transform.Translate(Speed * Dir * Time.fixedDeltaTime);
         }

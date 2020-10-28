@@ -46,7 +46,7 @@ public class MeteorManager : MonoBehaviour
 
                     Destroy(hit.collider.gameObject);
                     // Instantiate explode
-                    Instantiate(explode, hit.transform.position, Quaternion.identity); 
+                    Instantiate(explode, hit.point, Quaternion.identity); 
                 }
             }
             // if hit other
